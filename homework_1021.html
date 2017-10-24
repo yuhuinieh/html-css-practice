@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .page960{
+        width: 100%;
+        max-width: 960px;
+        margin: auto;
+    }
+    .main-banner{
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        padding: 100px 0;
+        background-color: #707070;
+        color: white;
+    }
+    .title{
+        font-size: 52px;
+        line-height: 1.4;
+    }
+    .title span{
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .subtitle{
+        font-size: 20px;
+        line-height: 1.4;
+        margin: 40px 0;
+    }
+    .link-button{
+        width: 200px;
+        padding: 15px 30px;
+        border: 2px solid lightgray;
+    }
+    .clearfix{
+        clear: both;
+    }
+    .feature1{
+        width: 100%;
+        background-color: #ccc;
+        padding: 40px 0;
+    }
+    .feature1 .item{
+        width: 300px;
+        height: 300px;
+        float: left;
+        padding: 10px;
+        background-color: #888;
+    }
+    .feature1 .item h3{
+        font-size: 24px;
+        line-height: 1.8;
+    }
+    .feature1 .item p{
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .feature2{
+        background-color: #FFAE00;
+        color: white;
+    }
+    .feature2 .number{
+        width: 240px;
+        height: 100px;
+        text-align: center;
+        font-size: 16px;
+        float: left;
+        padding: 50px 0;
+    }
+    .feature2 .number .emphasized{
+        font-size: 52px;
+        line-height: normal; 
+    }
+    .feature3{
+        width: 100%;
+        background-color: #fff;
+        padding: 40px 0;
+    }
+    .feature3 h2{
+        text-align: center;
+        font-size: 32px;
+    }
+    .feature3 .item{
+        width: 300px;
+        float: left;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .feature3 .item .center-image{
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+    .feature3 .item-detail{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .feature3 .item-detail .text-group{
+        width: 75%;
+        max-width: 220px;
+        float: left;
+        padding: 0 10px 10px;
+    }
+    .feature3 .item-detail img{
+        width: 25%;
+        max-width: 60px;
+        display: block;
+        float: left;
+        padding-top: 10px;
+    }
+    .feature3 .right .item-detail img, .feature3 .right .item-detail .text-group{
+        float: right;
+    }
+    .feature3 .item-detail .text-group h3{
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+    .feature3 .item-detail .text-group p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .feature4{
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 100px 0;
+        text-align: center;
+    }
+    .feature4 .item{
+        width: 240px;
+        float: left;
+    }
+    .feature4 .item p{
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 20px;    
+    }
+    .feature5{
+        width: 100%;
+        padding: 100px 0;
+    }
+    .feature5 h2{
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .feature5 .item{
+        width: 300px;
+        float: left;
+        margin: 0 10px;
+    }
+    .feature5 .item img{
+        width: 100%;
+        display: block;
+    }
+    .feature5 .item h3{
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    .feature5 .item p{
+        font-size: 14px;
+    }
+    .feature5 .item .foot{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .feature5 .item .foot *{
+        width: 33%;
+        float: left;
+    }
+    .feature6{
+        width: 100%;
+        background-color: #D3C9BC;
+        padding: 100px 0;
+        text-align: center;
+    }
+    .feature6 h2{
+        font-size: 42px;
+    }
+    .feature6 h3{
+        width: 50%;
+        font-size: 18px;
+        margin: 30px auto;
+    }
+    .feature6 .item{
+        float: left;
+        width: 220px;
+        margin: 0 10px;
+        list-style: none;
+    }
+    .feature6 .item li{
+        font-size: 18px;
+        padding: 10px;
+        border-top: 1px solid #F5F5F5;
+    }
+    .feature6 .item li a{
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+    .highlight{
+        background-color: #FFAE00;
+    }
+    .feature7{
+        width: 100%;
+        background-color: #6C5B54;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+    }
+    .feature7 h2{
+        font-size: 42px;
+    }
+    .feature7 h3{
+        font-size: 18px;
+        margin: 30px 0;
+    }
+    .feature8{
+        width: 100%;
+        background-color: #ffffff;
+        padding: 100px 0;
+        text-align: center;
+    }
+    .feature8 h2{
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .feature9{
+        width: 100%;
+        background-color: #ffffff;
+        padding: 100px 0;
+        text-align: center;
+        border-top: 1px solid #000; 
+    }
+    .feature9 h2{
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    .feature9 h3{
+        width: 50%;
+        font-size: 18px;
+        margin: 0 auto 30px;
+    }
+    .feature9 .item{
+        width: 300px;
+        float: left;
+        margin: 0 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-banner">
+        <div class="page960">
+            <h1 class="title">10 YEARS OF <span>EXPERIENCE IN THE INDUSTRY</span></h1>
+            <h2 class="subtitle">At Construction we strive to excel in every service we provide, adding value for our customers wherever possible, and thereby attaining national leadership in the construction industry.</h2>
+            <div class="buttons">
+                <a href="##" class="link-button">SEE ALL PROJECTS</a>
+                <a href="##" class="link-button">ABOUT US</a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="feature1">
+        <div class="page960">
+            <div class="item">
+                <h3>OUR MISSION</h3>
+                <p>We aim to make clients happy by selling the best products at the best prices, in a friendly, fun atmosphere. Our rating has remained at 100% with excellent and positive feedbacks. We are constantly adding new products.</p>
+            </div>
+            <div class="item">
+                <h3>WHAT WE DO</h3>
+                <p>With teams of experienced professionals we give multiple solutions to our clients around the world. Our professionals deliver high-touch services to help clients every step they take.</p>
+            </div>
+            <div class="item">
+                <h3>WHY CHOOSE US</h3>
+                <p>We have five values that have always contributed to our success; take pride, be passionate, never give up, work as a team and make it fun.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature2">
+        <div class="page960">
+            <div class="number">
+                <p class="emphasized">10</p>
+                <p>YEARS OF EXPERIENCE</p>
+            </div>
+            <div class="number">
+                <p class="emphasized">10</p>
+                <p>YEARS OF EXPERIENCE</p>
+            </div>
+            <div class="number">
+                <p class="emphasized">10</p>
+                <p>YEARS OF EXPERIENCE</p>
+            </div>
+            <div class="number">
+                <p class="emphasized">10</p>
+                <p>YEARS OF EXPERIENCE</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature3">
+        <div class="page960">
+            <h2>Our Services</h2>
+            <div class="item left">
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon1" alt="">
+                </div>
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon2" alt="">
+                </div>
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon3" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <img class="center-image" src="https://api.fnkr.net/testimg/250x400/00CED1/FFF/?text=iphone" alt="">
+            </div>
+                <div class="item right">
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon4" alt="">
+                </div>
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon5" alt="">
+                </div>
+                <div class="item-detail">
+                    <div class="text-group">
+                        <h3>Construction Consulting</h3>
+                        <p>Our various areas of expertise are available on a consulting basis as an additional support to our ..</p>
+                    </div>
+                    <img src="https://api.fnkr.net/testimg/60x60/00CED1/FFF/?text=icon6" alt="">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature4">
+        <div class="page960">
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/180x180/00CED1/FFF/?text=73%" alt="">
+                <p>LEADERSHIP</p>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/180x180/00CED1/FFF/?text=89%" alt="">
+                <p>LEADERSHIP</p>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/180x180/00CED1/FFF/?text=95%" alt="">
+                <p>LEADERSHIP</p>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/180x180/00CED1/FFF/?text=80%" alt="">
+                <p>LEADERSHIP</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature5">
+        <div class="page960">
+            <h2>Latest From The Blog</h2>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/300x200/AEB8B0/FFF/?text=img1" alt="">
+                <h3>Construction Company Services</h3>
+                <p>Our Construction Company is a superior provider of housing, educational and support services for individuals...</p>
+                <div class="foot">
+                    <p>Jan 27, 2016</p>
+                    <a href="#">13</a>
+                    <a href="##">Read More</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/300x200/AEB8B0/FFF/?text=img1" alt="">
+                <h3>Construction Company Services</h3>
+                <p>Our Construction Company is a superior provider of housing, educational and support services for individuals...</p>
+                <div class="foot">
+                    <p>Jan 27, 2016</p>
+                    <a href="#">13</a>
+                    <a href="##">Read More</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/300x200/AEB8B0/FFF/?text=img1" alt="">
+                <h3>Construction Company Services</h3>
+                <p>Our Construction Company is a superior provider of housing, educational and support services for individuals...</p>
+                <div class="foot">
+                    <p>Jan 27, 2016</p>
+                    <a href="#">13</a>
+                    <a href="##">Read More</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature6">
+        <div class="page960">
+            <h2>Choose Your Plan</h2>
+            <h3>Construction. offers a premium product and service for the increasing number of premier customers</h3>
+            <ul class="item">
+                <li>ECONOMY</li>
+                <li>$20/mo</li>
+                <li>PUBLIC PRESENTATION</li>
+                <li>CORE FEATURES</li>
+                <li>EMAIL SUPPORT</li>
+                <li>LIFETIME MEMBERSHIP</li>
+                <li class="highlight"><a href="##">GET STARTED</a></li>
+            </ul>
+            <ul class="item">
+                <li>ECONOMY</li>
+                <li>$20/mo</li>
+                <li>PUBLIC PRESENTATION</li>
+                <li>CORE FEATURES</li>
+                <li>EMAIL SUPPORT</li>
+                <li>LIFETIME MEMBERSHIP</li>
+                <li class="highlight"><a href="##">GET STARTED</a></li>
+            </ul>
+            <ul class="item">
+                <li>ECONOMY</li>
+                <li>$20/mo</li>
+                <li>PUBLIC PRESENTATION</li>
+                <li>CORE FEATURES</li>
+                <li>EMAIL SUPPORT</li>
+                <li>LIFETIME MEMBERSHIP</li>
+                <li class="highlight"><a href="##">GET STARTED</a></li>
+            </ul>
+            <ul class="item">
+                <li>ECONOMY</li>
+                <li>$20/mo</li>
+                <li>PUBLIC PRESENTATION</li>
+                <li>CORE FEATURES</li>
+                <li>EMAIL SUPPORT</li>
+                <li>LIFETIME MEMBERSHIP</li>
+                <li class="highlight"><a href="##">GET STARTED</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="feature7">
+        <div class="page960">
+            <h2>Subscribe to Our Newsletter</h2>
+            <h3>Sign up to our newsletter subscription and be the first to know about latest company news, special offers and discounts.</h3>
+        </div>
+    </div>
+    <div class="feature8">
+        <div class="page960">
+            <h2>Our Clients</h2>
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+            <img src="https://api.fnkr.net/testimg/150x100/AEB8B0/FFF/?text=img1" alt="">
+        </div>
+    </div>
+    <div class="feature9">
+        <div class="page960">
+            <h2>Testimonials</h2>
+            <h3>Have a look at some of our clients' testimonials as well as what some of the suppliers say</h3>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/100x100/AEB8B0/FFF/?text=img1" alt="">
+                <p>Derrick Whitehead</p>
+                <p>Social Media Specialist</p>
+                <p>"As soon as I enabled your service, I saw a significant improvement. It cut my working time in half. This is incredible!"</p>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/100x100/AEB8B0/FFF/?text=img2" alt="">
+                <p>Derrick Whitehead</p>
+                <p>Social Media Specialist</p>
+                <p>"As soon as I enabled your service, I saw a significant improvement. It cut my working time in half. This is incredible!"</p>
+            </div>
+            <div class="item">
+                <img src="https://api.fnkr.net/testimg/100x100/AEB8B0/FFF/?text=img3" alt="">
+                <p>Derrick Whitehead</p>
+                <p>Social Media Specialist</p>
+                <p>"As soon as I enabled your service, I saw a significant improvement. It cut my working time in half. This is incredible!"</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
