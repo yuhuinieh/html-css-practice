@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unique | 聶裕惠切版練習</title>
+    <link rel="stylesheet" href="pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            padding: 0 20px;
+        }
+        ul,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .page960 {
+            width: 960px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .clearfix:before,
+        .clearfix:after {
+          content: "";
+          display: table;
+        } 
+        .clearfix:after {
+          clear: both;
+        }
+        .clearfix {
+          zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+        }
+        .header {
+            padding: 15px 0;
+        }
+        .header .top-area {
+            font-size: 14px;
+            padding: 0 15px;
+        }
+        .header .top-area li { 
+            float: left;
+            margin: 0 10px;
+        }
+        .header .top-area li a{ 
+            transition: .5s;
+        }
+        .header .top-area li:hover a{ 
+            color: red;
+        }
+        .header .top-area .triangle {
+            margin-left: 5px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height: 0;
+            border-top: 5px solid #000;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transition: .5s;
+        }
+        .header .top-area li:hover .triangle{ 
+            border-top-color: red;
+        }
+        .header .top-area .left-list {
+            float: left;
+            margin-left: -10px; 
+        }
+        .header .top-area .left-list .em {
+            font-weight: 600;
+        }
+        .header .top-area .right-list {
+            float: right;
+            font-weight: 600;
+            margin-right: -10px;
+        }
+        .header .bottom-area { 
+            border-top: 1px solid #eee;
+            margin-top: 15px;
+            padding: 35px 0;
+            width: 100%;
+            position: relative;
+        }
+        .header .bottom-area .cart { 
+            float: left;
+            padding-left: 15px;   
+            font-size: 16px;
+            line-height: 2;
+            position: relative;
+            z-index: 1;
+        }
+        .header .bottom-area .cart a {
+            display: inline-block;
+            border: 2px solid #eee;
+            padding-right: 10px;
+        }
+        .header .bottom-area .cart span {
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        .header .bottom-area i {
+            font-size: 28px;
+            font-weight: 600;
+            color: red;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        .header .bottom-area .pe-7s-cart {
+            border-right: 2px solid #eee;
+        }
+        .header .bottom-area .logo {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+        .header .bottom-area .search {
+            float: right;
+            padding-right: 15px;   
+            font-size: 0;
+            text-align: right;
+            position: relative;
+            z-index: 1;
+        }
+        .header .bottom-area .search .search-form{
+            border: 2px solid #eee;
+            display: inline-block;
+        }
+        .header .bottom-area .search input {
+            min-width: 160px;
+            padding: 15px;
+            border: none;
+            border-right: 2px solid #eee;
+            vertical-align: middle;
+        }
+        .header .bottom-area .search button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        .menu {
+            padding: 0 15px;
+        }
+        .menu ul{
+            border-top: 4px solid #eee;
+            border-bottom: 4px solid #eee;
+            overflow: hidden;
+        }
+        .menu ul li{
+            display: inline-block;
+        }
+        .menu ul li a{
+            display: block;
+            padding: 15px;
+            transition: .5s;
+            font-weight: 600;
+        }
+        .menu ul li:nth-of-type(1) a{
+            color: white;
+            background-color: red;
+        }
+        .menu ul li:nth-of-type(8){
+            float: right;
+        }
+        .menu ul li:hover a{
+            color: white;
+            background-color: red;
+        }
+        .main-section{
+            padding: 0 15px;
+            margin: 30px auto;
+        }
+        .main-section .slider{
+            width: 690px;
+            margin-right: 11px; /* -4 pull back 4px inline-block */
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            background-color: #DDE0E0;
+        }
+        .main-section figure img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .main-section .info{
+            position: absolute;
+            top: 30%;
+            left: 50px;
+        }
+        .main-section .info{
+            position: absolute;
+            top: 30%;
+            left: 50px;
+        }
+        .main-section .info .note{
+            color: #393b7d;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .main-section .info .main{
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .main-section .info .desc{
+            color: #787878;
+            font-size: 13px;
+        }
+        .main-section .info .btn{
+            color: white;
+            background-color: #d02323;
+            margin-top: 25px;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 13px;
+            transition: .5s;
+        }
+        .main-section .info .btn:hover{
+            background-color: black;
+        }
+        .main-section .info .desc{
+            color: #787878;
+            font-size: 13px;
+        }
+        .main-section .aside-ad{
+            width: 210px;
+            margin-left: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .main-section .aside-ad .item:nth-of-type(1){
+            margin-bottom: 30px;
+        }
+        .main-section .aside-ad .item img{
+            width: 100%;
+            display: block;
+        }
+        .main-section .aside-ad .item {
+            position: relative;
+        }
+        .main-section .aside-ad .item a{
+            display: block;
+        }
+        .main-section .aside-ad .item a:hover img{
+            opacity: .8;
+        }
+        .main-section .aside-ad .item1 p{
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .main-section .aside-ad .item2 .texts{
+            width: 100%;
+            position: absolute;
+            padding-left: 10px;
+            bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .main-section .aside-ad .item2 .texts .text1{
+            color: red;
+            display: block;
+            line-height: 1.5;
+        }
+        .main-section .aside-ad .item2 .texts .text2{
+            color: black; 
+            line-height: 1.5;
+            display: block;
+        }
+        .main-section .aside-ad .item2 .texts .text3{
+            color: #787878;
+            display: block;
+            line-height: 1.5;
+        }
+        .main-section .aside-ad .item2 .texts .btn{
+            color: white;
+            background-color: #d02323;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 13px;
+            transition: .5s;
+            margin-top: 10px;
+        }
+        .main-section .aside-ad .item2 .texts .text4{
+            color: white;
+            position: absolute;
+            right: 10px;
+            bottom: -5px;
+            background-color: #EA2F50;
+            text-align: right;
+            border-radius: 100% 0 0 0;
+            padding: 20px 5px 0 15px;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        .main-section .aside-ad .item2 .texts .price{
+            font-size: 28px;
+            display: block;
+        }
+        .features{
+            margin: 30px auto;
+        }
+        .features .item{ 
+            width: 270px;
+            text-align: center;
+            padding: 10px;
+            margin: 0 15px;
+            background-color: #F5F5F5;
+            float: left;
+        }
+        .features .item i{
+            font-size: 60px;
+        }
+        .features .item p{
+            font-size: 12px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .features .item .bold{
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+        }
+        .promotion-items .tabs{
+            text-align: center;
+            border-bottom: 4px #eee solid;
+            margin: 0 15px;
+        }
+        .promotion-items .tabs li{
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 10px 5px;
+            cursor: pointer;
+        }
+        .promotion-items .tabs li:first-child{
+            color: red;
+        }
+        .promotion-items .items-wrap{
+            padding: 0 5px;
+        }
+        .promotion-items .items-wrap .item{
+            width: 217.5px;
+            margin: 10px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .promotion-items .items-wrap .item:nth-of-type(4n+1){
+            clear: left;
+        }
+        .promotion-items .items-wrap .item .proImg{
+            display: block;
+            overflow: hidden;
+        }
+        .promotion-items .items-wrap .item .new:before{
+            content: 'NEW';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #F7C143;
+            color: white;
+            font-size: 13px;
+            padding: 2px 10px;
+            z-index: 1;
+        }
+        .promotion-items .items-wrap .item .proImg:hover img{
+            transform: scale(1.1);
+            opacity: .7;
+        }
+        .promotion-items .items-wrap .item img{
+            width: 100%;
+            display: block;
+            transition: .5s;
+        }
+        .promotion-items .items-wrap .item .texts{
+            padding: 0 10px;
+        }
+        .promotion-items .items-wrap .item h3 a{
+            color: red;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .promotion-items .items-wrap .item .price{
+            color: red;
+            font-size: 20px;
+        }
+        .promotion-items .items-wrap .item .toolbar{
+            position: absolute;
+            top: 5px;
+            left: -50px;
+            transition: .5s;
+            z-index: 2;
+        }
+        .promotion-items .items-wrap .item .toolbar i{
+            font-size: 24px;
+            font-weight: 600;
+            padding: 10px;
+            margin: 5px;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            display: block;
+        }
+        .promotion-items .items-wrap .item:hover .toolbar{
+            left: 0;
+        }
+        .promotion-items .bottom-ad{
+            margin-top: 30px;
+        }
+        .promotion-items .bottom-ad .item{
+            margin: 0 15px;
+            float: left;
+            width: 450px;
+            position: relative;
+        }
+        .promotion-items .bottom-ad .item a{
+            display: block;
+            height: 100%;
+        }
+        .promotion-items .bottom-ad img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .promotion-items .bottom-ad .item .info{
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .promotion-items .bottom-ad .item .title{
+            color: red;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .promotion-items .bottom-ad .item .note{
+            color: #aaa;
+            font-size: 12px;
+        }
+        .promotion-items .bottom-ad .item .btn{
+            color: white;
+            font-size: 13px;
+            padding: 4px 10px;
+            background-color: #C1362E;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .best-seller h2{
+            text-align: center;
+            border-bottom: 4px #eee solid;
+            margin: 20px 0 10px;
+        }
+        .best-seller .items-wrap .item{
+            width: 170px;
+            margin: 10px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .best-seller .items-wrap .item:nth-of-type(4n+1){
+            clear: none;
+        }
+        .best-seller .items-wrap .item .toolbar i{
+            font-size: 20px;
+        }
+        .article-section .item{
+            width: 450px;
+            margin: 0 15px;
+            float: left;
+        }
+        .article-section .item h3.title{
+            border-bottom: 4px #eee solid;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .article-section .testimonial{
+            text-align: center;
+        }
+        .article-section .testimonial .info{
+            padding: 15px;
+        }
+        .article-section .testimonial .info q{
+            font-size: 14px;
+            font-style: italic;
+            color: #333;
+        }
+        .article-section .testimonial .info .author{
+            font-weight: 600;
+            color: #000;
+            margin-top: 5px;
+        }
+        .article-section .testimonial .info .author_position{
+            color: #aaa;
+            font-size: 12px;
+        }
+        .article-section .testimonial .photos img{
+            vertical-align: top;
+            width: 75px;
+            margin: 0 6px;
+            display: inline-block;
+            border: 2px solid #eee;
+            opacity: 0.7;
+        }
+        .article-section .testimonial .photos img.selcted{
+            border: 2px solid red;
+            opacity: 1;
+        }
+        .article-section .lastest-blog .info{
+            padding: 20px 0 0;
+        }
+        .article-section .lastest-blog .info .blog{
+            width: 210px;
+            margin-right: 30px;
+            float: left;
+        }
+        .article-section .lastest-blog .info .blog:last-child{
+            margin-right: 0px;
+        }
+        .article-section .lastest-blog .info .blog img{
+            width: 100%;
+        }
+        .article-section .lastest-blog .info .blog h3.title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            border: none;
+            margin-top: 5px;
+        }
+        .article-section .lastest-blog .info .blog .post-meta li{
+            display: inline-block;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .article-section .lastest-blog .info .blog .post-meta a{
+            color: #aaa;
+        }
+        .article-section .lastest-blog .info .blog .post-meta li i{
+            margin-right: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #aaa;
+        }
+        .article-section .lastest-blog .info .blog p{
+            font-size: 13px;
+            color: #333;
+        }
+        .article-section .lastest-blog .info .blog .moreBtn{
+            font-size: 13px;
+            color: red;
+            font-weight: 600;
+        }
+        .brand-logos {
+            padding: 0 15px;
+            margin: 30px 15px;
+            border: 2px solid #ccc;
+            background-color: #F5F5F5;
+        }
+        .brand-logos li{
+            width: 20%;
+            float: left;
+        }
+        .brand-logos li img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .bottom-ad .item{
+            width: 290px;
+            margin: 15px;
+            float: left;
+        }
+        .bottom-ad .item img{
+            width: 100%;
+        }
+        .unipue{
+            background-color: #f6344b;
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+        }
+        .unipue h2{
+            font-size: 42px;
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .unipue ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        .unipue ul li:last-child{
+            margin-right: 0px;
+        }
+        .unipue ul li i{
+            font-size: 32px;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        .unipue ul li a{
+            color: white;
+        }
+        footer{
+            margin: 30px 0;
+            padding: 15px;
+        }
+        footer .sitemap{
+            width: 697px;
+            float: left;
+        }
+        footer .sitemap .title{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        footer .sitemap .map{
+            width: 33.33%;
+            display: inline-block;
+            margin-left: -4px;
+        }
+        footer li{
+            margin: 12px 0;
+        }
+        footer .sitemap .map a{
+            font-size: 13px;
+            color: #666;
+            transition: .5s;
+        }
+        footer .sitemap .map a:before{
+            content: ">";
+            font-size: 11px;
+            display: inline-block!important;
+            cursor: pointer;
+            line-height: 20px;
+            color: #aaa;
+            margin-right: 5px;
+        }
+        footer .sitemap .map li:hover a{
+            color: red;
+        }
+        footer .sitemap .map:first-child{
+            margin-left: 0px;
+        }
+        footer .subscribe{
+            width: 232px;
+            float: left;
+        }
+        footer .subscribe .title{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        footer .subscribe .desc{
+            font-size: 13px;
+            color: #aaa;
+        }
+        footer .subscribe .email{
+            font-size: 14px;
+            font-weight: 300;
+            width: 100%;
+            border: 2px solid #eee; 
+            line-height: 28px;
+            display: block;
+            padding: 5px 15px;
+        }
+        footer .subscribe .submit{
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+            color: white;
+            background-color: red;
+            line-height: 24px;
+            font-size: 13px;
+            background: #d02323;
+            border: 1px solid #d02323;
+            border-radius: 0px;
+            padding: 8px 15px;
+            margin: 10px 0 5px;
+        }
+        footer .subscribe .submit i{
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        footer .subscribe .snsGroup li{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #ccc;
+            text-align: center;
+            display: inline-block;
+        }
+        footer .subscribe .snsGroup li a{
+            display: block;
+        }
+        footer .bottom{
+            clear: both;
+            border-top: 4px #eee solid;
+            padding: 20px 15px;
+        }
+        footer .bottom .item{
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+        }
+        footer .bottom .item:first-child{
+           margin-left: -4px;
+        }
+        footer .bottom .right{
+            text-align: right;
+        }
+        footer .bottom img{
+            display: inline-block;
+            width: 40px;
+        }
+        footer .bottom img:hover{
+            opacity: .7;
+        }
+        footer .bottom{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header class="header page960">
+        <div class="top-area clearfix" >
+            <ul class="left-list">
+                <li><p class="em">Welcome to our store!</p></li>
+                <li><a href="#">Engilsh<span class="triangle"></span></a></li>
+                <li><a href="#">USD<span class="triangle"></span></a></li>
+            </ul>
+            <ul class="right-list">
+                <li><a href="#">My Account</a></li>    
+                <li><a href="#">Wishlist</a></li>    
+                <li><a href="#">Checkout</a></li>    
+                <li><a href="#">More<span class="triangle"></span></a></li>    
+                <li><a href="#">Log in</a></li>    
+            </ul>            
+        </div>
+        <div class="bottom-area clearfix">
+            <div class="cart"><a href="##"><i class="pe-7s-cart" aria-hidden="true"></i><span>2</span>My Cart / $259.00</a></div>
+            <div class="logo"><a href="#"><img src="http://htmunique.justthemevalley.com/images/logo.png" alt=""></a></div>
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" id="search" name="search" placeholder="Search entire store here...">
+                    <button type="submit"><i class="pe-7s-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav class="menu page960">
+        <ul>
+            <li><a href="##">Home</a></li>
+            <li><a href="##">Pages</a></li>
+            <li><a href="##">Smartphones</a></li>
+            <li><a href="##">Camera & Photo</a></li>
+            <li><a href="##">Apple Store</a></li>
+            <li><a href="##">Computers</a></li>
+            <li><a href="##">Blog</a></li>
+            <li><a href="##">Features</a></li>
+        </ul>
+    </nav>
+    <div class="main-section page960 clearfix">
+        <div class="slider">
+            <figure>
+                <img src="http://htmunique.justthemevalley.com/images/slider/slide-img1.jpg" alt="">
+            </figure>
+            <div class="info">
+                <p class="note">New Collection</p>
+                <p class="main">Stylish Look</p>
+                <p class="desc">Beautiful templates from our creative community.</p>
+                <a class="btn" href="##">Shop Now</a>
+            </div>
+        </div>
+        <div class="aside-ad">
+            <div class="item item1">
+                <a href="#"> 
+                    <img src="http://htmunique.justthemevalley.com/images/banner-img2.jpg" alt="">
+                    <p>Smart Phone <br> Exclusively Available On</p>
+                </a>   
+            </div>
+            <div class="item item2">
+                <a href="##">
+                    <img src="http://htmunique.justthemevalley.com/images/banner-img1.jpg" alt="">
+                    <div class="texts">
+                        <span class="text1">Mens</span>
+                        <span class="text2">Collection</span>
+                        <span class="text3">Never Miss a Second</span>
+                        <span class="btn">Buy now</span>
+                        <span class="text4">From<span class="price">$99</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="features page960 clearfix">
+        <div class="item">
+            <i class="pe-7s-piggy"></i>
+            <p class="bold">Reasonable pricing</p>
+            <p>To establish a selling price for a product</p>
+        </div>
+        <div class="item">
+            <i class="pe-7s-timer"></i>
+            <p class="bold">Limited time offers</p>
+            <p>Hurry up! You Don't want to miss This!</p>
+        </div>
+        <div class="item">
+            <i class="pe-7s-headphones"></i>
+            <p class="bold">24/7 client support</p>
+            <p>In order to provide 24X7 customer support</p>
+        </div>
+    </div>
+    <div class="promotion-items page960">
+        <div class="tabs">
+            <ul>
+                <li>New Arrivals</li>
+                <li>Best Seller</li>
+                <li>Latest Products</li>
+            </ul>
+        </div>
+        <div class="items-wrap">
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img01.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img02.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img03.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg new"><img src="http://htmunique.justthemevalley.com/images/products/img04.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img05.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img06.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img07.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg new"><img src="http://htmunique.justthemevalley.com/images/products/img08.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-ad clearfix">
+            <div class="item">
+                <a href="##">
+                    <img src="http://htmunique.justthemevalley.com/images/banner-img3.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Incredible Audio</p>
+                        <p class="note">the essence of sound</p>
+                        <p class="btn">Shop now</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="##">
+                    <img src="http://htmunique.justthemevalley.com/images/banner-img4.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Incredible Audio</p>
+                        <p class="note">the essence of sound</p>
+                        <p class="btn">Buy now</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="promotion-items best-seller page960">
+        <h2>Best Seller</h2>
+        <!-- <div class="arrows">
+            <div class="left-arror"></div>
+            <div class="right-arror"></div>
+        </div> -->
+        <div class="items-wrap">
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img10.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img11.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img12.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg new"><img src="http://htmunique.justthemevalley.com/images/products/img13.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="proImg"><img src="http://htmunique.justthemevalley.com/images/products/img14.jpg" alt=""></a>
+                <div class="texts">
+                    <h3><a href="##">Title</a></h3>
+                    <span><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i><i class="pe-7s-star"></i></span>
+                    <p class="price">$155.00</p>
+                </div>
+                <div class="toolbar">
+                    <i class="pe-7s-graph3"></i>
+                    <i class="pe-7s-search"></i>
+                    <i class="pe-7s-like"></i>
+                    <i class="pe-7s-cart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix article-section page960">
+        <div class="item testimonial">
+            <h3 class="title">Testimonial</h3>
+            <div class="info">
+                <q>Aliquam convallis vulputate augue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dolor dictum, dapibus libero eu, malesuada nulla. Aliquam convallis vulputate augue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dolor dictum, dapibus libero eu, malesuada nulla. Aliquam convallis vulputate augue.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a dolor dictum, dapibus libero eu, malesuada nulla. Aliquam convallis vulputate augue.</q>
+                <p class="author">John Doe</p>
+                <p class="author_position">CEO, ABC Softwear</p>
+            </div>
+            <div class="photos">
+                <img src="http://htmunique.justthemevalley.com/images/testimonials-img1.jpg" alt="">
+                <img class="selcted" src="http://htmunique.justthemevalley.com/images/testimonials-img2.jpg" alt="">
+                <img src="http://htmunique.justthemevalley.com/images/testimonials-img3.jpg" alt="">
+            </div>
+        </div>
+        <div class="item lastest-blog">
+            <h3 class="title">Latest Blog</h3>
+                <div class="info clearfix">
+                    <div class="blog">
+                        <a href="#"><img src="http://htmunique.justthemevalley.com/images/blog-img1.jpg" alt=""></a>
+                        <a href="#"><h3 class="title">Winter Morning Unique</h3></a>
+                        <ul class="post-meta">
+                            <li><i class="pe-7s-users"></i><a href="#">admin</a> </li>
+                            <li><i class="pe-7s-chat"></i><a href="#">12 comments</a> </li>
+                            <li><i class="pe-7s-date"></i>2017-02-25</li>
+                        </ul>
+                        <p>In adipiscing leo magna, a vehicula mi convallis ac. Vivamus volutpat, ante nec congue dictum.</p>
+                        <a class="moreBtn" href="##">Read More →</a>
+                    </div>
+                    <div class="blog">
+                        <a href="#"><img src="http://htmunique.justthemevalley.com/images/blog-img2.jpg" alt=""></a>
+                        <a href="#"><h3 class="title">Perfect for promoting</h3></a>
+                        <ul class="post-meta">
+                            <li><i class="pe-7s-users"></i><a href="#">admin</a> </li>
+                            <li><i class="pe-7s-chat"></i><a href="#">45 comments</a> </li>
+                            <li><i class="pe-7s-date"></i>2017-04-05</li>
+                        </ul>
+                        <p>Nam a dolor dictum, dapibus libero eu, malesuada nulla. Aliquam convallis vulputate augue.</p>
+                        <a class="moreBtn" href="##">Read More →</i></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="page960">
+        <ul class="clearfix brand-logos">
+            <li><a href="#"><img src="http://htmunique.justthemevalley.com/images/brand3.png" alt=""></a></li>
+            <li><a href="#"><img src="http://htmunique.justthemevalley.com/images/brand4.png" alt=""></a></li>
+            <li><a href="#"><img src="http://htmunique.justthemevalley.com/images/brand5.png" alt=""></a></li>
+            <li><a href="#"><img src="http://htmunique.justthemevalley.com/images/brand6.png" alt=""></a></li>
+            <li><a href="#"><img src="http://htmunique.justthemevalley.com/images/brand7.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="clearfix bottom-ad page960">
+        <div class="item">
+            <a href="#">
+                <img src="http://htmunique.justthemevalley.com/images/banner-img6.jpg" alt="">
+                <div class="info">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="http://htmunique.justthemevalley.com/images/banner-img7.jpg" alt="">
+                <div class="info">
+                    <p></p>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="http://htmunique.justthemevalley.com/images/banner-img8.jpg" alt="">
+                <div class="info">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="unipue page960">
+        <h2>Unique</h2>
+        <ul>
+            <li><i class="pe-7s-map-marker"></i>Company, 12/34 - West 21st Street, New York, USA</li>
+            <li><i class="pe-7s-call"></i>+ (800) 0123 456 789</li>
+            <li><i class="pe-7s-mail-open"></i><a href="##">support@example.com</a></li>
+        </ul>
+    </div>
+    <footer class="page960">
+        <div class="sitemap">
+            <ul class="map">
+                <li class="title">Useful links</li>
+                <li><a href="##">Product Recall</a></li>
+                <li><a href="##">Gift Vouchers</a></li>
+                <li><a href="##">Returns & Exchange</a></li>
+                <li><a href="##">Shipping Options</a></li>
+                <li><a href="##">Help & FAQs</a></li>
+                <li><a href="##">Order history</a></li>
+            </ul>
+            <ul class="map">
+                <li class="title">Service</li>
+                <li><a href="##">Account</a></li>
+                <li><a href="##">Wishlist</a></li>
+                <li><a href="##">Shopping Cart</a></li>
+                <li><a href="##">Return Policy</a></li>
+                <li><a href="##">Special</a></li>
+                <li><a href="##">Lookbook</a></li>
+            </ul>
+            <ul class="map">
+                <li class="title">Information</li>
+                <li><a href="##">Sites Map</a></li>
+                <li><a href="##">News</a></li>
+                <li><a href="##">Trends</a></li>
+                <li><a href="##">About Us</a></li>
+                <li><a href="##">Contact Us</a></li>
+                <li><a href="##">My Orders</a></li>
+            </ul>
+        </div>
+        <ul class="subscribe">
+            <li class="title">Subscribe to our news</li>
+            <li class="desc">Subscribe to be the first to know about Sales, Events, and Exclusive Offers!</li>
+            <li>
+                <form>
+                    <input class="email" type="email" placeholder="Enter Your Email">
+                    <button class="submit" type="submit"><i class="pe-7s-mail"></i>SUBSCRIBE</button>
+                </form>
+            </li>
+            <li>
+                Follow Us
+                <ul class="snsGroup">
+                    <li><a href="##">F</a></li>
+                    <li><a href="##">G</a></li>
+                    <li><a href="##">T</a></li>
+                    <li><a href="##">L</a></li>
+                    <li><a href="##">R</a></li>
+                    <li><a href="##">I</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="bottom">
+            <div class="item left">
+                <p class="copyright">Copyright © 2017 Unique . All Rights Reserved.</p>
+            </div>
+            <div class="item right">
+                <img src="http://htmunique.justthemevalley.com/images/payment-1.png" alt="">
+                <img src="http://htmunique.justthemevalley.com/images/payment-2.png" alt="">
+                <img src="http://htmunique.justthemevalley.com/images/payment-3.png" alt="">
+                <img src="http://htmunique.justthemevalley.com/images/payment-4.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
